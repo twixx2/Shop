@@ -1,0 +1,16 @@
+.cart {
+    padding: 20px 20px 100px 20px;
+    background: #fafafa;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+  
+    &__total {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: right;
+      color: #333;
+    }
+  }
+  

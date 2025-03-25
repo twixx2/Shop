@@ -1,0 +1,33 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 30px 60px 100px;
+
+  &__not-found {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 25px;
+    color: #000;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  &__load-more {
+    grid-column: 1 / -1;
+    padding: 12px 0;
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+
+    &:hover {
+      background: #5b55d9;
+    }
+  }
+}
