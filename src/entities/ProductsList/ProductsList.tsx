@@ -22,14 +22,14 @@ const ProductsList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [page, setPage] = useState(1);
   const size = 12;
-  const [trigger, { isLoading, isFetching}] = useLazyGetProductQuery();
+  const [trigger, { isLoading, isFetching }] = useLazyGetProductQuery();
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
     trigger({ page, size }).then((res: any) => {
       if (!res.error && res.data) {
         if (page === 1) {
-          setTotal(res.data.total);
+          setTotal(Math.min(res.data.total, 100));
           setProducts(res.data.products);
         } else {
           setProducts(prev => [...prev, ...res.data.products]);
